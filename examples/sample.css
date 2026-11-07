@@ -1,0 +1,13 @@
+:root {
+  --unused-color: #333;
+  --used-color: #111;
+}
+.title {
+  color: var(--used-color);
+  color: #222 !important;
+}
+.title {
+  margin: 0;
+}
+.empty {
+}

@@ -1,0 +1,1 @@
+{"compilerOptions":{"lib":["ES2022"],"module":"Node16","noEmit":true,"rootDir":"src","skipLibCheck":true,"sourceMap":true,"strict":true,"target":"ES2022","types":["node"]},"exclude":["scripts","dist","node_modules"],"include":["src"]}

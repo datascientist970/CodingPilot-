@@ -15,7 +15,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Made for VS Code](https://img.shields.io/badge/VS%20Code-%5E1.85.0-007ACC?logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=dawood406.devpilot-ai)
 
-[Install](#-quickstart) · [Features](#-features) · [Languages](#-supported-languages) · [Docs](#-how-it-works) · [FAQ](#-faq) · [Marketplace](https://marketplace.visualstudio.com/items?itemName=dawood406.devpilot-ai) · [GitHub](https://github.com/datascientist970/devpilot)
+[Install](#-quickstart) · [Features](#-features) · [Languages](#-supported-languages) · [Docs](#-how-it-works) · [FAQ](#-faq) · [Marketplace](https://marketplace.visualstudio.com/items?itemName=dawood406.devpilot-ai) · [GitHub](https://github.com/datascientist970/CodingPilot-)
 
 </div>
 
@@ -219,7 +219,7 @@ Press `F5` in VS Code to launch the Extension Development Host.
 - ✅ **v1.4.1** — Empty issue categories expand with a "No … issues" note; AI Code Quality Review warns instead of silently doing nothing with no provider.
 - ✅ **v1.4.0** — Dependency checks & install, test pre-flight, progress bars with % and elapsed time.
 - ⚪ **Planned** — A real screen recording of the extension (replacing the AI-generated tour video above).
-- ⚪ **Planned** — More languages and analyzers, based on feedback — tell us what you need in [Issues](https://github.com/datascientist970/devpilot/issues).
+- ⚪ **Planned** — More languages and analyzers, based on feedback — tell us what you need in [Issues](https://github.com/datascientist970/CodingPilot-/issues).
 
 ---
 
@@ -245,7 +245,7 @@ MIT — see [LICENSE](LICENSE).
 
 **If Coding Pilot saves you time, please ⭐ star the repo and leave a review on the [Marketplace](https://marketplace.visualstudio.com/items?itemName=dawood406.devpilot-ai).**
 
-![Star History](https://api.star-history.com/svg?repos=datascientist970/devpilot&type=Date)
+![Star History](https://api.star-history.com/svg?repos=datascientist970/CodingPilot-&type=Date)
 
 *Scan. Fix. Test. Document.*
 

@@ -1,0 +1,29 @@
+{
+  "tasks": [
+    {
+      "group": {
+        "isDefault": true,
+        "kind": "build"
+      },
+      "label": "npm: compile",
+      "presentation": {
+        "reveal": "never"
+      },
+      "problemMatcher": [],
+      "script": "compile",
+      "type": "npm"
+    },
+    {
+      "group": "build",
+      "isBackground": true,
+      "label": "npm: watch",
+      "presentation": {
+        "reveal": "never"
+      },
+      "problemMatcher": [],
+      "script": "watch",
+      "type": "npm"
+    }
+  ],
+  "version": "2.0.0"
+}

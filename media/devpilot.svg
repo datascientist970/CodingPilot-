@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="DevPilot logo">
+  <!-- Professional, flat mark: dark slate tile, clean code brackets, one teal accent. -->
+  <rect x="32" y="32" width="448" height="448" rx="96" fill="#0F172A"/>
+  <rect x="32" y="32" width="448" height="448" rx="96" fill="none" stroke="#1E293B" stroke-width="4"/>
+  <!-- Code brackets: </> -->
+  <g fill="none" stroke="#F8FAFC" stroke-width="36" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M196 188 L112 256 L196 324"/>
+    <path d="M316 188 L400 256 L316 324"/>
+  </g>
+  <path d="M282 172 L230 340" fill="none" stroke="#2DD4BF" stroke-width="36" stroke-linecap="round"/>
+</svg>

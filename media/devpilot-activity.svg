@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="DevPilot activity icon">
+  <!-- Monochrome version for theme-adaptive surfaces: white strokes, no background. -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="36" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M196 188 L112 256 L196 324"/>
+    <path d="M316 188 L400 256 L316 324"/>
+    <path d="M282 172 L230 340"/>
+  </g>
+</svg>

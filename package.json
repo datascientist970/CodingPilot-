@@ -1,0 +1,635 @@
+{
+  "activationEvents": [
+    "onView:devpilot.sidebar",
+    "onCommand:devpilot.scanProject",
+    "onCommand:devpilot.scanCurrentFile",
+    "onCommand:devpilot.configureAI",
+    "onCommand:devpilot.openSettings",
+    "onCommand:devpilot.showIssue",
+    "onCommand:devpilot.applyFix",
+    "onCommand:devpilot.autoFix",
+    "onCommand:devpilot.explainIssue",
+    "onCommand:devpilot.explainInline",
+    "onCommand:devpilot.explainSelection",
+    "onCommand:devpilot.suggestFix",
+    "onCommand:devpilot.inlineFixOne",
+    "onCommand:devpilot.inlineFixAll",
+    "onCommand:devpilot.fixCurrentIssue",
+    "onCommand:devpilot.fixAllIssues",
+    "onCommand:devpilot.verifyFix",
+    "onCommand:devpilot.generateTests",
+    "onCommand:devpilot.runTests",
+    "onCommand:devpilot.runCurrentFile",
+    "onCommand:devpilot.generateDocs",
+    "onCommand:devpilot.generateReadme",
+    "onCommand:devpilot.optimizeCode",
+    "onCommand:devpilot.refactorCode",
+    "onCommand:devpilot.reviewCode",
+    "onCommand:devpilot.securityReview",
+    "onCommand:devpilot.clearAIKey",
+    "onCommand:devpilot.fixSelectedIssues",
+    "onCommand:devpilot.analyzeBug",
+    "onCommand:devpilot.reviewQuality",
+    "onCommand:devpilot.generateEdgeCaseTests",
+    "onCommand:devpilot.generateInputValidationTests",
+    "onCommand:devpilot.generateRegressionTests",
+    "onCommand:devpilot.configureTestTools",
+    "onCommand:devpilot.exportReport",
+    "onCommand:devpilot.followGithub",
+    "onCommand:devpilot.followLinkedin",
+    "onCommand:devpilot.refresh",
+    "onCommand:devpilot.checkDependencies"
+  ],
+  "categories": [
+    "Linters",
+    "Testing",
+    "Other",
+    "Snippets"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "devpilot.scanProject",
+        "icon": "$(search)",
+        "title": "DevPilot: Scan Project"
+      },
+      {
+        "command": "devpilot.scanCurrentFile",
+        "icon": "$(file)",
+        "title": "DevPilot: Scan Current File"
+      },
+      {
+        "command": "devpilot.refresh",
+        "icon": "$(refresh)",
+        "title": "DevPilot: Refresh Sidebar"
+      },
+      {
+        "command": "devpilot.configureAI",
+        "icon": "$(settings-gear)",
+        "title": "DevPilot: Configure AI Provider"
+      },
+      {
+        "command": "devpilot.clearAIKey",
+        "icon": "$(trash)",
+        "title": "DevPilot: Remove Stored AI Key"
+      },
+      {
+        "command": "devpilot.openSettings",
+        "icon": "$(gear)",
+        "title": "DevPilot: Open Settings"
+      },
+      {
+        "command": "devpilot.showIssue",
+        "title": "DevPilot: Show Issue"
+      },
+      {
+        "command": "devpilot.applyFix",
+        "icon": "$(wrench)",
+        "title": "DevPilot: Apply Fix"
+      },
+      {
+        "command": "devpilot.autoFix",
+        "icon": "$(sparkle)",
+        "title": "DevPilot: Auto Fix with AI"
+      },
+      {
+        "command": "devpilot.suggestFix",
+        "icon": "$(lightbulb)",
+        "title": "DevPilot: Suggest Fixes (local + AI candidates)"
+      },
+      {
+        "command": "devpilot.inlineFixOne",
+        "icon": "$(wrench)",
+        "title": "DevPilot: Fix this (inline)"
+      },
+      {
+        "command": "devpilot.inlineFixAll",
+        "icon": "$(wand)",
+        "title": "DevPilot: Fix all in file (inline)"
+      },
+      {
+        "command": "devpilot.fixCurrentIssue",
+        "icon": "$(wrench)",
+        "title": "DevPilot: Fix Current Issue"
+      },
+      {
+        "command": "devpilot.fixAllIssues",
+        "icon": "$(wand)",
+        "title": "DevPilot: Fix All Issues in File"
+      },
+      {
+        "command": "devpilot.verifyFix",
+        "icon": "$(check)",
+        "title": "DevPilot: Verify Fix (re-scan + optional tests)"
+      },
+      {
+        "command": "devpilot.explainIssue",
+        "icon": "$(comment-discussion)",
+        "title": "DevPilot: Explain Issue with AI"
+      },
+      {
+        "command": "devpilot.explainInline",
+        "icon": "$(info)",
+        "title": "DevPilot: Explain inline (lightbulb)"
+      },
+      {
+        "command": "devpilot.explainSelection",
+        "icon": "$(comment)",
+        "title": "DevPilot: Explain Selected Code"
+      },
+      {
+        "command": "devpilot.generateTests",
+        "icon": "$(beaker)",
+        "title": "DevPilot: Generate Tests"
+      },
+      {
+        "command": "devpilot.runTests",
+        "icon": "$(play)",
+        "title": "DevPilot: Run Tests"
+      },
+      {
+        "command": "devpilot.runCurrentFile",
+        "icon": "$(terminal)",
+        "title": "DevPilot: Run Current File (runtime check)"
+      },
+      {
+        "command": "devpilot.generateDocs",
+        "icon": "$(book)",
+        "title": "DevPilot: Generate Documentation"
+      },
+      {
+        "command": "devpilot.generateReadme",
+        "icon": "$(book)",
+        "title": "DevPilot: Generate README"
+      },
+      {
+        "command": "devpilot.optimizeCode",
+        "icon": "$(zap)",
+        "title": "DevPilot: Optimize Code with AI"
+      },
+      {
+        "command": "devpilot.refactorCode",
+        "icon": "$(symbol-method)",
+        "title": "DevPilot: Refactor Code with AI"
+      },
+      {
+        "command": "devpilot.reviewCode",
+        "icon": "$(comment-discussion)",
+        "title": "DevPilot: AI Code Review"
+      },
+      {
+        "command": "devpilot.securityReview",
+        "icon": "$(shield)",
+        "title": "DevPilot: Security Review"
+      },
+      {
+        "command": "devpilot.fixSelectedIssues",
+        "title": "DevPilot: Fix Selected Issues",
+        "icon": "$(wrench)"
+      },
+      {
+        "command": "devpilot.analyzeBug",
+        "title": "DevPilot: Analyze Bug (root cause)",
+        "icon": "$(bug)"
+      },
+      {
+        "command": "devpilot.reviewQuality",
+        "title": "DevPilot: AI Code Quality Review",
+        "icon": "$(pulse)"
+      },
+      {
+        "command": "devpilot.generateEdgeCaseTests",
+        "title": "DevPilot: Generate Edge Case Tests",
+        "icon": "$(beaker)"
+      },
+      {
+        "command": "devpilot.generateInputValidationTests",
+        "title": "DevPilot: Generate Input Validation Tests",
+        "icon": "$(beaker)"
+      },
+      {
+        "command": "devpilot.generateRegressionTests",
+        "title": "DevPilot: Generate Regression Tests",
+        "icon": "$(beaker)"
+      },
+      {
+        "command": "devpilot.configureTestTools",
+        "title": "DevPilot: Configure Test Tools (tick to auto-run)",
+        "icon": "$(beaker)"
+      },
+      {
+        "command": "devpilot.exportReport",
+        "title": "DevPilot: Export Scan Report",
+        "icon": "$(export)"
+      },
+      {
+        "command": "devpilot.followGithub",
+        "title": "DevPilot: Follow on GitHub (@datascientist970)",
+        "icon": "$(github)"
+      },
+      {
+        "command": "devpilot.followLinkedin",
+        "title": "DevPilot: Follow on LinkedIn (dawood406)",
+        "icon": "$(link-external)"
+      },
+      {
+        "command": "devpilot.checkDependencies",
+        "title": "DevPilot: Check & Install Missing Dependencies",
+        "icon": "$(package)"
+      }
+    ],
+    "configuration": {
+      "properties": {
+        "devpilot.ai.model": {
+          "default": "",
+          "description": "Model name (e.g. gpt-4o-mini, gemini-2.0-flash, claude-sonnet-4-5, llama-3.3-70b-versatile). Leave empty for the provider default.",
+          "type": "string"
+        },
+        "devpilot.ai.provider": {
+          "default": "none",
+          "description": "AI provider. 'none' disables AI; static analysis, local fixes, local docs and local test templates still work.",
+          "enum": [
+            "none",
+            "openai",
+            "gemini",
+            "claude",
+            "groq"
+          ],
+          "type": "string"
+        },
+        "devpilot.analysis.complexityThreshold": {
+          "default": 10,
+          "description": "Cyclomatic complexity threshold above which a function is flagged.",
+          "type": "number"
+        },
+        "devpilot.analysis.duplicateBlockSize": {
+          "default": 6,
+          "description": "Number of consecutive meaningful lines considered for duplicate detection.",
+          "type": "number"
+        },
+        "devpilot.analysis.longFunctionLines": {
+          "default": 50,
+          "description": "Maximum function length in lines before it is flagged as long.",
+          "type": "number"
+        },
+        "devpilot.analysis.maxLineLength": {
+          "default": 120,
+          "description": "Maximum line length in characters before it is flagged.",
+          "type": "number"
+        },
+        "devpilot.diagnostics.enabled": {
+          "default": true,
+          "description": "Publish DevPilot issues to the Problems panel.",
+          "type": "boolean"
+        },
+        "devpilot.enable.codeQuality": {
+          "default": true,
+          "description": "Enable code quality heuristics (long lines, long functions, deep nesting, magic numbers).",
+          "type": "boolean"
+        },
+        "devpilot.enable.complexity": {
+          "default": true,
+          "description": "Enable cyclomatic complexity analysis (all languages).",
+          "type": "boolean"
+        },
+        "devpilot.enable.duplicateCode": {
+          "default": true,
+          "description": "Enable duplicate code block detection (all languages).",
+          "type": "boolean"
+        },
+        "devpilot.enable.externalTools": {
+          "default": true,
+          "description": "Enable optional external tools (cppcheck, clang-tidy, ESLint, go vet, rustc, php -l, ruby -c). Missing tools are skipped silently.",
+          "type": "boolean"
+        },
+        "devpilot.enable.mypy": {
+          "default": true,
+          "description": "Enable Mypy type checking for Python files (requires mypy installed).",
+          "type": "boolean"
+        },
+        "devpilot.enable.naming": {
+          "default": true,
+          "description": "Enable naming convention checks (all languages).",
+          "type": "boolean"
+        },
+        "devpilot.enable.ruff": {
+          "default": true,
+          "description": "Enable Ruff analysis for Python files (requires ruff installed).",
+          "type": "boolean"
+        },
+        "devpilot.enable.security": {
+          "default": true,
+          "description": "Enable security checks (eval, unsafe C functions, hardcoded secrets, SQL injection patterns, ...).",
+          "type": "boolean"
+        },
+        "devpilot.enable.unusedFunctions": {
+          "default": true,
+          "description": "Enable unused function detection (all languages).",
+          "type": "boolean"
+        },
+        "devpilot.enable.unusedVariables": {
+          "default": true,
+          "description": "Enable unused variable detection (all languages).",
+          "type": "boolean"
+        },
+        "devpilot.fix.requireConfirmation": {
+          "default": true,
+          "description": "Ask for confirmation before applying any fix to the original file.",
+          "type": "boolean"
+        },
+        "devpilot.fix.validateSyntax": {
+          "default": true,
+          "description": "Validate syntax (Python py_compile, node --check, gcc/g++ -fsyntax-only, delimiter balance for others) before applying a fix.",
+          "type": "boolean"
+        },
+        "devpilot.mypy.path": {
+          "default": "mypy",
+          "description": "Mypy executable path.",
+          "type": "string"
+        },
+        "devpilot.python.path": {
+          "default": "python",
+          "description": "Python executable path (e.g. 'python', 'python3', or a full path). Used for py_compile verification and running Python files.",
+          "type": "string"
+        },
+        "devpilot.ruff.path": {
+          "default": "ruff",
+          "description": "Ruff executable path.",
+          "type": "string"
+        },
+        "devpilot.scan.exclusions": {
+          "default": [
+            "**/node_modules/**",
+            "**/.venv/**",
+            "**/venv/**",
+            "**/__pycache__/**",
+            "**/dist/**",
+            "**/build/**",
+            "**/.git/**",
+            "**/target/**"
+          ],
+          "description": "Glob patterns excluded from project scans.",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "devpilot.scan.onSave": {
+          "default": false,
+          "description": "Automatically scan the current file on save.",
+          "type": "boolean"
+        },
+        "devpilot.scan.pythonOnly": {
+          "default": false,
+          "description": "Only scan Python files. When false, all supported languages are scanned.",
+          "type": "boolean"
+        },
+        "devpilot.test.autoRunAfterFix": {
+          "default": false,
+          "description": "Run the detected test runner automatically during 'Verify Fix'.",
+          "type": "boolean"
+        },
+        "devpilot.test.enabledTools": {
+          "type": "array",
+          "default": [],
+          "description": "Testing tools to auto-run when you click Run Tests. Tick tools here (Settings UI) or via 'DevPilot: Configure Test Tools' (multi-select QuickPick). Runnable tools run their command; SaaS/management tools are reported as external, never faked.",
+          "items": {
+            "type": "string",
+            "enum": [
+              "playwright",
+              "selenium",
+              "cypress",
+              "postman",
+              "bruno",
+              "insomnia",
+              "restassured",
+              "appium",
+              "maestro",
+              "testim",
+              "mabl",
+              "copilot",
+              "jmeter",
+              "k6",
+              "jira",
+              "testrail",
+              "xray",
+              "zephyr"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "devpilot.test.customCommands": {
+          "type": "object",
+          "default": {},
+          "description": "Custom run command per testing tool, e.g. {\"selenium\": \"python -m pytest tests/test_selenium.py\", \"insomnia\": \"inso run test abc123\"}. A custom command overrides the tool's default command. Used for Selenium, Appium, Insomnia and for reporting to Jira/TestRail/Xray/Zephyr.",
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "devpilot.test.autoRunEnabledTools": {
+          "type": "boolean",
+          "default": true,
+          "description": "When true, ticked testing tools auto-run as part of 'DevPilot: Run Tests'. Turn off to run only the project's own test runner."
+        },
+        "devpilot.dependencies.autoInstall": {
+          "type": "boolean",
+          "default": false,
+          "description": "If true, DevPilot installs missing dependencies without asking first. If false (default), it asks before every install."
+        },
+        "devpilot.dependencies.checkBeforeTests": {
+          "type": "boolean",
+          "default": true,
+          "description": "Check test dependencies (e.g. pytest, node_modules) BEFORE running tests, and offer to install them instead of letting the tests fail."
+        }
+      },
+      "title": "DevPilot"
+    },
+    "keybindings": [
+      {
+        "command": "devpilot.scanProject",
+        "key": "ctrl+alt+s",
+        "mac": "cmd+alt+s"
+      },
+      {
+        "command": "devpilot.fixCurrentIssue",
+        "key": "ctrl+alt+f",
+        "mac": "cmd+alt+f",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "devpilot.autoFix",
+        "key": "ctrl+alt+a",
+        "mac": "cmd+alt+a",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "devpilot.explainIssue",
+        "key": "ctrl+alt+e",
+        "mac": "cmd+alt+e",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "devpilot.generateTests",
+        "key": "ctrl+alt+t",
+        "mac": "cmd+alt+t",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "devpilot.scanCurrentFile",
+          "group": "devpilot@1",
+          "when": "editorTextFocus"
+        },
+        {
+          "command": "devpilot.explainSelection",
+          "group": "devpilot@2",
+          "when": "editorTextFocus && editorHasSelection"
+        },
+        {
+          "command": "devpilot.generateTests",
+          "group": "devpilot@3",
+          "when": "editorTextFocus"
+        },
+        {
+          "command": "devpilot.generateDocs",
+          "group": "devpilot@4",
+          "when": "editorTextFocus"
+        },
+        {
+          "command": "devpilot.reviewCode",
+          "group": "devpilot@5",
+          "when": "editorTextFocus"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "devpilot.explainIssue",
+          "group": "inline@1",
+          "when": "view == devpilot.sidebar && viewItem == devpilot.issue"
+        },
+        {
+          "command": "devpilot.suggestFix",
+          "group": "inline@2",
+          "when": "view == devpilot.sidebar && viewItem == devpilot.issue"
+        },
+        {
+          "command": "devpilot.autoFix",
+          "group": "inline@3",
+          "when": "view == devpilot.sidebar && viewItem == devpilot.issue"
+        },
+        {
+          "command": "devpilot.applyFix",
+          "group": "inline@4",
+          "when": "view == devpilot.sidebar && viewItem == devpilot.issue"
+        },
+        {
+          "command": "devpilot.analyzeBug",
+          "when": "view == devpilot.sidebar && viewItem == devpilot.issue",
+          "group": "inline@5"
+        }
+      ],
+      "view/title": [
+        {
+          "command": "devpilot.scanProject",
+          "group": "navigation@1",
+          "when": "view == devpilot.sidebar"
+        },
+        {
+          "command": "devpilot.scanCurrentFile",
+          "group": "navigation@2",
+          "when": "view == devpilot.sidebar"
+        },
+        {
+          "command": "devpilot.generateTests",
+          "group": "navigation@3",
+          "when": "view == devpilot.sidebar"
+        },
+        {
+          "command": "devpilot.generateDocs",
+          "group": "navigation@4",
+          "when": "view == devpilot.sidebar"
+        },
+        {
+          "command": "devpilot.configureAI",
+          "group": "navigation@5",
+          "when": "view == devpilot.sidebar"
+        },
+        {
+          "command": "devpilot.configureTestTools",
+          "when": "view == devpilot.sidebar",
+          "group": "navigation@6"
+        }
+      ]
+    },
+    "views": {
+      "devpilot": [
+        {
+          "icon": "media/devpilot.svg",
+          "id": "devpilot.sidebar",
+          "name": "DevPilot"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "icon": "media/devpilot.svg",
+          "id": "devpilot",
+          "title": "DevPilot"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "contents": "Scan, explain, fix, test and document your code \u2014 in any language.\n[Scan Project](command:devpilot.scanProject)\n[Scan Current File](command:devpilot.scanCurrentFile)\n[Configure AI](command:devpilot.configureAI)",
+        "view": "devpilot.sidebar"
+      }
+    ]
+  },
+  "description": "AI-powered code quality assistant for Python, C/C++, JavaScript, TypeScript, Java, C#, Go, Rust, PHP, Ruby, Swift, Kotlin and more \u2014 detect bugs, explain issues, suggest and apply fixes, generate tests and documentation.",
+  "devDependencies": {
+    "@types/node": "20.x",
+    "@types/vscode": "^1.85.0",
+    "esbuild": "^0.20.0",
+    "typescript": "^5.3.0"
+  },
+  "displayName": "Coding Pilot",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "icon": "media/icon.png",
+  "main": "./dist/extension.js",
+  "name": "devpilot-ai",
+  "publisher": "dawood406",
+  "scripts": {
+    "compile": "node esbuild.js",
+    "test:analysis": "esbuild scripts/test-entry.ts --bundle --platform=node --format=cjs --outfile=/tmp/devpilot-analysis-test.cjs --log-level=warning && node /tmp/devpilot-analysis-test.cjs",
+    "vscode:prepublish": "node esbuild.js --production",
+    "watch": "node esbuild.js --watch"
+  },
+  "version": "1.4.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/datascientist970/devpilot"
+  },
+  "license": "MIT",
+  "keywords": [
+    "code quality",
+    "lint",
+    "linter",
+    "testing",
+    "test generation",
+    "ai",
+    "refactoring",
+    "documentation",
+    "code review",
+    "bug detection"
+  ],
+  "galleryBanner": {
+    "color": "#0F172A",
+    "theme": "dark"
+  },
+  "homepage": "https://github.com/datascientist970/devpilot"
+}
